@@ -1,6 +1,6 @@
-package abstractfactory;
+package abstractfactory.notification;
 
-public class EmailNotification implements Notification{
+public class EmailNotification implements Notification {
 
     @Override
     public void notifyUser() {

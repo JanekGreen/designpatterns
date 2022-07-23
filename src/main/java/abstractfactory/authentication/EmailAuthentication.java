@@ -1,4 +1,4 @@
-package abstractfactory;
+package abstractfactory.authentication;
 
 public class EmailAuthentication implements Authentication {
 

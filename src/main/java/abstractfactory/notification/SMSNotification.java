@@ -1,4 +1,4 @@
-package abstractfactory;
+package abstractfactory.notification;
 
 public class SMSNotification implements Notification {
 

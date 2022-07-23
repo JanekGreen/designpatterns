@@ -1,5 +1,8 @@
 package abstractfactory;
 
+import abstractfactory.authentication.Authentication;
+import abstractfactory.notification.Notification;
+
 public class Main {
 
     public static void main(String[] args) {

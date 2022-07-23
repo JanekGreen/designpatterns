@@ -1,6 +1,8 @@
-package abstractfactory;
+package abstractfactory.notification;
 
-public class NotificationFactory implements AbstractFactory<Notification>{
+import abstractfactory.AbstractFactory;
+
+public class NotificationFactory implements AbstractFactory<Notification> {
 
     @Override
     public Notification create(String type) {

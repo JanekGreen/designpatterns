@@ -1,6 +1,8 @@
-package abstractfactory;
+package abstractfactory.authentication;
 
-public class AuthenticationFactory implements AbstractFactory<Authentication>{
+import abstractfactory.AbstractFactory;
+
+public class AuthenticationFactory implements AbstractFactory<Authentication> {
 
     @Override
     public Authentication create(String type) {

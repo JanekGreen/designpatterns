@@ -1,5 +1,8 @@
 package abstractfactory;
 
+import abstractfactory.authentication.AuthenticationFactory;
+import abstractfactory.notification.NotificationFactory;
+
 public class FactoryProvider {
 
     public static AbstractFactory getFactory(String type) {
