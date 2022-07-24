@@ -9,6 +9,10 @@ public class Main {
                 .build();
         System.out.println(user);
     }
+    ShapeData shapeData =  ShapeData.ofCircle(9d);
+    ShapeData rec = ShapeData.ofRectangle(12d, 12d);
+
+
 
 
 }
