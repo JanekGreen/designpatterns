@@ -6,5 +6,5 @@ import java.util.Optional;
 
 public interface Searchable {
     Optional<Customer> findById(int id);
-    public List<Customer> findAll();
+    List<Customer> findAll();
 }
