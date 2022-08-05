@@ -1,6 +1,6 @@
-package factory;
+package factory.authentication;
 
-public class EmailAuthentication implements Authentication{
+public class EmailAuthentication implements Authentication {
 
     @Override
     public boolean authenticate() {

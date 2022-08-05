@@ -1,6 +1,6 @@
-package factory;
+package factory.authentication;
 
-public class SMSAuthentication implements Authentication{
+public class SMSAuthentication implements Authentication {
 
     @Override
     public boolean authenticate() {

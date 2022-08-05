@@ -1,5 +1,9 @@
 package factory;
 
+import factory.authentication.Authentication;
+import factory.authentication.EmailAuthentication;
+import factory.authentication.SMSAuthentication;
+
 public class AuthenticationFactory {
     public Authentication getAuthentication(AuthenticationType type){
         if(type == AuthenticationType.SMS){
