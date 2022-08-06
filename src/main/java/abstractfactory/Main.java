@@ -6,10 +6,11 @@ import abstractfactory.notification.Notification;
 public class Main {
 
     public static void main(String[] args) {
-        AbstractFactory factory = FactoryProvider.getFactory("Notification");
-        Notification sms = (Notification) factory.create("SMS");
+        AbstractFactory<Notification> factory = FactoryProvider.getFactory("Notification");
+        //AbstractFactory factory = FactoryProvider.getFactory("Notification");
+        Notification sms = factory.create("SMS");
         sms.notifyUser();
-        Notification email = (Notification) factory.create("EMAIL");
+        Notification email = factory.create("EMAIL");
         email.notifyUser();
         factory = FactoryProvider.getFactory("Authentication");
         Authentication authSms = (Authentication) factory.create("SMS");
