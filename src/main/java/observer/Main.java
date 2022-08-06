@@ -9,6 +9,7 @@ public class Main {
         newsAgency.receiveNews("Unidentified object flying object seen over the white house!!!");
         Observer radio = new RadioStationOne();
         newsAgency.register(radio);
+        newsAgency.unregister(televsion);
         newsAgency.receiveNews("First contact with intelligent alien civilisation has been made!!!");
 
     }

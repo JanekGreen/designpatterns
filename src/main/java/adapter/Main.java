@@ -6,7 +6,7 @@ public class Main {
         DataProcessingService dataProcessingService = new DataProcessingService();
         dataProcessingService.processData(new receiverImpl());
         //todo nowy interfejs do obsłużenia DataReceiver
-        //dataProcessingService.processData(new DataReceiverImpl());
+        dataProcessingService.processData(new DataReceiverAdapter(new DataReceiverImpl()));
 
 
     }

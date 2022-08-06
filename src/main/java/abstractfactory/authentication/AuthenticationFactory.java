@@ -11,7 +11,7 @@ public class AuthenticationFactory implements AbstractFactory<Authentication> {
         }else if (type.equalsIgnoreCase("EMAIL")){
             return new EmailAuthentication();
         }
-        return null;
+        throw new IllegalArgumentException("Unknown type");
 
     }
 

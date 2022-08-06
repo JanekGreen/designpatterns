@@ -11,7 +11,7 @@ public class NotificationFactory implements AbstractFactory<Notification> {
         } else if(type.equalsIgnoreCase("EMAIL")){
            return new EmailNotification();
         }
-        return null;
+        throw new IllegalArgumentException("Unknown type");
     }
 
 }
