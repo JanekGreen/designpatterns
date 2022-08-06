@@ -3,6 +3,7 @@ package generics;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -69,6 +70,12 @@ public class Main {
             nums.add(i);
         }
        return;
+    }
+    /*Nie obchodzi nas konkretny typ*/
+    /*tutaj interesuje nas, że mamy listę,*/
+    /*używamy też, gdy chcemy skorzystać z metod klasy Object*/
+    /*równoznaczne z List<Object> ale źle wygląda użycie List<Object>*/
+    public static void printForElement(List<?> list){
     }
 
    /* *//*metoda sparametryzowana typem generycznym*//*
