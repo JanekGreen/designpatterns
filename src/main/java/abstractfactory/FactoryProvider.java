@@ -2,7 +2,6 @@ package abstractfactory;
 
 import abstractfactory.authentication.AuthenticationFactory;
 import abstractfactory.notification.NotificationFactory;
-import abstractfactory.sender.SendFactory;
 
 public class FactoryProvider {
 
@@ -12,8 +11,6 @@ public class FactoryProvider {
 
         } else if (type.equalsIgnoreCase("Authentication")) {
             return new AuthenticationFactory();
-        }else if(type.equalsIgnoreCase("Send")){
-            return new SendFactory();
         }
         return null;
     }

@@ -2,7 +2,6 @@ package abstractfactory;
 
 import abstractfactory.authentication.Authentication;
 import abstractfactory.notification.Notification;
-import abstractfactory.sender.Send;
 
 public class Main {
 
@@ -18,9 +17,6 @@ public class Main {
         authSms.authenticate();
         Authentication authEmail = (Authentication) factory.create("EMAIL");
         authEmail.authenticate();
-        AbstractFactory<Send> sendFactory = FactoryProvider.getFactory("Send");
-        Send pidgeon = sendFactory.create("Pidgeon");
-        pidgeon.send();
 
     }
 }
