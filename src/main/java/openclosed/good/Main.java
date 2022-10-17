@@ -14,18 +14,6 @@ public class Main {
         }
         System.out.println(sum);
 
- /*
- Przykład użycia ifPresent ze streamami, w przypadku gdy kolekcja na której operujemy będzie pusta ifPresent sie nie wykona
-        shapes.stream()
-                .filter(s -> s instanceof Circle)
-                //pusta
-                .max((s) -> 1)
-                .ge
-                .ifPresent(Main::processShape);*/
-    }
-    public static void processShape(Shape s){
-        //
-    }
 
-
+    }
 }
