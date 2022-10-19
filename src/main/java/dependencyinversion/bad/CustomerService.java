@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class CustomerService {
-    CustomerDaoImpl customerDaoImpl;
+    CustomerOracleDbImpl customerDaoImpl;
 
-    public CustomerService(CustomerDaoImpl customerDaoImpl) {
+    public CustomerService(CustomerOracleDbImpl customerDaoImpl) {
         this.customerDaoImpl = customerDaoImpl;
     }
     public Optional<Customer> findById(int id){
