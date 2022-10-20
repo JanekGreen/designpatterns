@@ -38,7 +38,7 @@ public class User {
         return address;
     }
 
-
+/*konwencja nazwaKlasyBuilder*/
     public static class UserBuilder {
 
         private final String firstName;
@@ -75,8 +75,9 @@ public class User {
         }
 
         private void validateUserObject(User user) {
-            //Do some basic validations to check
-            //if user object does not break any assumption of system
+           if(user.firstName == null){
+               throw new IllegalStateException();
+           }
         }
 
     }
