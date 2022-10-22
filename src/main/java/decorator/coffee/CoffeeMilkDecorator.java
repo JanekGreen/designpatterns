@@ -1,4 +1,4 @@
-package decorator;
+package decorator.coffee;
 
 public class CoffeeMilkDecorator extends CoffeeDecorator{
 

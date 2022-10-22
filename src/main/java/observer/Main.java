@@ -1,5 +1,10 @@
 package observer;
 
+import observer.news.NewsAgency;
+import observer.news.Observer;
+import observer.news.RadioStationOne;
+import observer.news.TelevisionOne;
+
 public class Main {
 
     public static void main(String[] args) {

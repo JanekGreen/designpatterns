@@ -1,4 +1,4 @@
-package observer;
+package observer.news;
 
 import java.util.ArrayList;
 import java.util.List;

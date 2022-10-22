@@ -1,4 +1,4 @@
-package observer.java;
+package observer.news.java;
 
 import java.util.Observable;
 import java.util.Observer;

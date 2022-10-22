@@ -1,12 +1,11 @@
-package strategy;
+package strategy.discount;
 
 import java.math.BigDecimal;
-import java.util.function.Function;
 
-public class DiscountStrategy {
+public class PaymentService {
     private Discount discount;
 
-    public DiscountStrategy(Discount discount) {
+    public PaymentService(Discount discount) {
         this.discount = discount;
     }
     public BigDecimal getPrice(BigDecimal price){

@@ -1,22 +1,24 @@
 package strategy;
 
+import strategy.discount.ChristmasDiscount;
+import strategy.discount.PaymentService;
+import strategy.discount.EasterDiscount;
+
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        DiscountStrategy strategy = new DiscountStrategy(new ChristmasDiscount());
+        PaymentService strategy = new PaymentService(new ChristmasDiscount());
         BigDecimal price = strategy.getPrice(BigDecimal.valueOf(100d));
         System.out.println(price);
-        strategy = new DiscountStrategy(new EasterDiscount());
+        strategy = new PaymentService(new EasterDiscount());
         price = strategy.getPrice(BigDecimal.valueOf(100d));
         System.out.println(price);
         BigDecimal originalPrice = BigDecimal.valueOf(100d);
         System.out.println(originalPrice);
+        /*pokazać możliwość stworzenia strategii za pomocą intrfejsów funkcyjnych*/
 
 
     }

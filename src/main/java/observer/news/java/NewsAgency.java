@@ -1,6 +1,5 @@
-package observer.java;
+package observer.news.java;
 
-import java.awt.Button;
 import java.util.Observable;
 
 public class NewsAgency extends Observable {

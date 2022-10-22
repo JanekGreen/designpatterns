@@ -1,4 +1,4 @@
-package observer;
+package observer.news;
 
 public class RadioStationOne implements Observer{
 

@@ -1,4 +1,4 @@
-package strategy;
+package strategy.discount;
 
 import java.math.BigDecimal;
 

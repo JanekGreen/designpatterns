@@ -1,4 +1,4 @@
-package observer;
+package observer.news;
 
 public interface Observable {
    void notifyObservers();

@@ -1,4 +1,4 @@
-package decorator;
+package decorator.coffee;
 
 public abstract class CoffeeDecorator implements Coffee{
 private Coffee coffee;
