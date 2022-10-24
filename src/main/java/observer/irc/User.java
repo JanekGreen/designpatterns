@@ -1,5 +1,5 @@
 package observer.irc;
 
 /*observer*/
-public class User  {
+public class User implements ChatObserver  {
 }

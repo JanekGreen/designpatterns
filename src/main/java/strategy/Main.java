@@ -8,6 +8,7 @@ import strategy.paymenttype.PaymentByCard;
 import strategy.paymenttype.PaymentByCash;
 
 import java.math.BigDecimal;
+import java.util.function.Function;
 
 public class Main {
 
@@ -28,6 +29,8 @@ public class Main {
 
         giftStore.setPaymentType(new PaymentByCash());
         giftStore.realizePayment(100d);
+
+        Function<String, String> func = (String a) -> a.toUpperCase();
 
 
 
