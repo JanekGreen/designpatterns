@@ -9,7 +9,9 @@ public class PaymentService {
         this.discount = discount;
     }
     public BigDecimal getPrice(BigDecimal price){
-       return discount.calculateDiscount(price);
+       /*nie wiemy nic o implementacji Discount
+        tutaj nas ta implementacja nie interesuje*/
+        return discount.calculateDiscount(price);
     }
 
 }
