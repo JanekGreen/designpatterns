@@ -22,7 +22,11 @@ public class Main {
         System.out.println(price);
         BigDecimal originalPrice = BigDecimal.valueOf(100d);
         System.out.println(originalPrice);
+
         /*pokazać możliwość stworzenia strategii za pomocą intrfejsów funkcyjnych*/
+        PaymentService paymentService = new PaymentService((bd) -> BigDecimal.valueOf(bd.intValue() * 0.5));
+        BigDecimal price1 = paymentService.getPrice(BigDecimal.valueOf(100d));
+        System.out.println("price1 "+price1);
 
         GiftStore giftStore = new GiftStore(new PaymentByCard());
         giftStore.realizePayment(100d);
