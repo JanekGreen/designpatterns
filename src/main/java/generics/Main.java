@@ -37,7 +37,7 @@ public class Main {
         List<Number>  numbers = new ArrayList<>();
         List<Number> ages = new ArrayList<>();
 
-        storeNumbers(ages);
+        storeNumbers(nums);
 
         Integer n = Integer.valueOf(6);
         Number parent = n;
@@ -66,6 +66,7 @@ public class Main {
     public static void storeNumbers(List<? super Integer> nums){
        /* IntStream.rangeClosed(1,10)
                 .forEach(nums::add);*/
+
         for (int i=1; i<=10;i++){
             nums.add(i);
         }

@@ -17,5 +17,11 @@ public class Main {
         Coffee coffeeWithSugarAndMilk = new CoffeeSugarDecorator(milk);
         System.out.println(coffeeWithSugarAndMilk.make());
 
+        Coffee coffeeBlack = new BlackCoffee();
+        //Coffee almondMilkCoffee = new AlmondMilkDecorator(coffeeBlack);
+        //almondMilkCoffee.make()
+
+
+
     }
 }

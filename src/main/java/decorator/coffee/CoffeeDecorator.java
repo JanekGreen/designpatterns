@@ -9,6 +9,7 @@ private Coffee coffee;
 
     @Override
     public String make() {
+        /*dekorator robi to samo co obiekt, który jest przekazany do konstruktora*/
        return coffee.make();
     }
 

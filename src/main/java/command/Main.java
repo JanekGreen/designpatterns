@@ -7,10 +7,11 @@ public class Main {
     public static void main(String[] args) {
         WindowsFileSystemReceiver win = new WindowsFileSystemReceiver();
         UnixFileSystemReceiver unix = new UnixFileSystemReceiver();
+
         Command command = new OpenFileCommand(win);
+        Command commandTwo = new OpenFileCommand(unix);
         command.execute();
-        command = new OpenFileCommand(unix);
-        command.execute();
+        commandTwo.execute();
 
     }
 }
