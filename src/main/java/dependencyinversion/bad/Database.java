@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class CustomerOracleDbImpl {
+public class Database {
     private static final Map<Integer, Customer> customers;
     static {
         customers = new HashMap<>();
@@ -20,6 +20,5 @@ public class CustomerOracleDbImpl {
     }
     public List<Customer> findAll(){
         return new ArrayList<>(customers.values());
-
     }
 }
