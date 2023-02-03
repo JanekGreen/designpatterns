@@ -6,9 +6,6 @@ import java.util.List;
 
 public class Main {
 
-    static public int returnUserAge(){
-        return 12;
-    }
 
     public static void main(String[] args) {
         User user = new User.UserBuilder("Ada", "Lovelace")
@@ -17,6 +14,7 @@ public class Main {
                 .phone("0700880770")
                 .build();
 
+        /*Robimy buildera dla klasy Dog*/
         System.out.println(user);
 
     }
