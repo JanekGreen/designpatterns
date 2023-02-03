@@ -1,8 +1,6 @@
 package factory;
 
-import factory.authentication.Authentication;
-import factory.authentication.EmailAuthentication;
-import factory.authentication.SMSAuthentication;
+import factory.authentication.*;
 
 public class Main {
 
@@ -12,9 +10,7 @@ public class Main {
         authentication.authenticate();
         authentication = factory.getAuthentication(AuthenticationType.SMS);
         authentication.authenticate();
+        //Robimy PaymentFactory, która będzie produkowała obiekty implementujące interface Pay w zależności od typu PaymentType.
 
-        /*dozwolone dla klasy która implementuje interface Authentication*/
-        Authentication authentication1 = new EmailAuthentication();
-        Authentication authentication2 = new SMSAuthentication();
     }
 }

@@ -3,7 +3,6 @@ package decorator;
 import decorator.coffee.BlackCoffee;
 import decorator.coffee.Coffee;
 import decorator.coffee.CoffeeMilkDecorator;
-import decorator.coffee.CoffeeSugarDecorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,14 +11,10 @@ public class Main {
         coffee.make();
         Coffee milk = new CoffeeMilkDecorator(coffee);
         System.out.println(milk.make());
-        Coffee coffeeWithSugar = new CoffeeSugarDecorator(coffee);
-        System.out.println(coffeeWithSugar.make());
-        Coffee coffeeWithSugarAndMilk = new CoffeeSugarDecorator(milk);
-        System.out.println(coffeeWithSugarAndMilk.make());
+        //CoffeeSugarDecorator
 
-        Coffee coffeeBlack = new BlackCoffee();
-        //Coffee almondMilkCoffee = new AlmondMilkDecorator(coffeeBlack);
-        //almondMilkCoffee.make()
+        //Robimy od zera dekorator dla aparatu (klasa PhotoCamera), który będzie dodawał filtry po zrobieniu zdjęcia np: czarobiały.
+        //BlackAndWhitePhotoDecorator
 
 
 

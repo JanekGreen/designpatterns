@@ -12,8 +12,10 @@ public class FactoryProvider {
 
         } else if (type.equalsIgnoreCase("Authentication")) {
             return new AuthenticationFactory();
-        } else if(type.equalsIgnoreCase("package"))
-        return new PackageFactory();
+        }
+        /*Dodajemy nowy rodzaj fabryki, który pozwoli produkować nam paczki (morskie i powietrzne)
+         * */
+
     return null;
     }
 

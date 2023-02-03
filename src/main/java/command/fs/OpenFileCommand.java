@@ -1,13 +1,11 @@
-package command;
-
-import command.fs.FileSystemReceiver;
+package command.fs;
 
 public class OpenFileCommand implements Command {
 
-	private FileSystemReceiver fileSystem;
+	private FileSystem fileSystem;
 	
-	public OpenFileCommand(FileSystemReceiver fs){
-		this.fileSystem=fs;
+	public OpenFileCommand(FileSystem fileSystem) {
+		this.fileSystem=fileSystem;
 	}
 	@Override
 	public void execute() {

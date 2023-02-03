@@ -1,4 +1,4 @@
-package command;
+package command.fs;
 
 public interface Command {
 

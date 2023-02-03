@@ -1,8 +1,4 @@
-package factory;
-
-import factory.authentication.Authentication;
-import factory.authentication.EmailAuthentication;
-import factory.authentication.SMSAuthentication;
+package factory.authentication;
 
 public class AuthenticationFactory {
     public Authentication getAuthentication(AuthenticationType type){

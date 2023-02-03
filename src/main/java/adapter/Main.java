@@ -7,9 +7,9 @@ public class Main {
         dataProcessingService.processData(new receiverImpl());
         //niepasujący interfejs/klasa
         dataProcessingService.processData(new DataReceiverAdapter(new DataReceiverImpl()));
-        //Proszę dodać adapter który pozwoli na obsłużenie linii poniżej
-        //dataProcessingService.processData(new DataReceiverNextGenImpl());
-        //dodać adapter który obsłuży DataReceiverNextGen w DataProcessingService
+        //Proszę dodać adapter który pozwoli na obsłużenie DataReceiverNewImpl w DataProcessingService
+        //dataProcessingService.processData(...(new DataReceiverNewImpl()));
+
 
 
     }

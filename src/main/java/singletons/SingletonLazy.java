@@ -6,9 +6,9 @@ import java.util.List;
 public class SingletonLazy {
     private static SingletonLazy INSTANCE;
 
-    private List<String> names = new ArrayList<>();
-    private SingletonLazy(){}
+    private String data;
 
+    private SingletonLazy(){}
 
     public static SingletonLazy getInstance(){
         /*
@@ -19,15 +19,12 @@ public class SingletonLazy {
         }
         return INSTANCE;
     }
-    public void addPetName(String name){
-        names.add(name);
-    }
-    public void printNames(){
-        names.stream()
-                .forEach(System.out::println);
 
-        names.stream()
-                .forEach(name -> System.out.println(name));
+    public String getData() {
+        return data;
     }
-   
+
+    public void setData(String data) {
+        this.data = data;
+    }
 }

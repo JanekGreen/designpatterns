@@ -1,17 +1,22 @@
 package command;
 
-import command.fs.UnixFileSystemReceiver;
-import command.fs.WindowsFileSystemReceiver;
+import command.fs.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        WindowsFileSystemReceiver win = new WindowsFileSystemReceiver();
-        UnixFileSystemReceiver unix = new UnixFileSystemReceiver();
+        List<Command> commands = new ArrayList<>();
+        FileSystem fileSystem = new FileSystem();
+        commands.add(new OpenFileCommand(fileSystem));
+        commands.add(new CloseFileCommand(fileSystem));
+        commands.add(new WriteFileCommand(fileSystem));
+        for (Command command: commands){
+            command.execute();
+        }
 
-        Command command = new OpenFileCommand(win);
-        Command commandTwo = new OpenFileCommand(unix);
-        command.execute();
-        commandTwo.execute();
+        /*Tworzymy Program realizujący pilot od telewizora przy użyciu wzorca command Klasa TvRemoteControl*/
 
     }
 }

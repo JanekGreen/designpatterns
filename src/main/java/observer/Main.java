@@ -26,11 +26,6 @@ public class Main {
         newsAgency.register(radioZyz);
         newsAgency.receiveNews("Pierwszy w polsce polityk powiedział prawde");
 
-        IrcChannel ircChannel = new IrcChannel();
-        ChatObserver user = new User();
-        ircChannel.register(user);
-        ircChannel.logIn("Janek");
-
 
 
     }

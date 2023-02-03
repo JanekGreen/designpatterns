@@ -19,12 +19,8 @@ public class Main {
         Authentication authEmail = (Authentication) factory.create("EMAIL");
         authEmail.authenticate();
 
-        AbstractFactory<Package> aPackage = FactoryProvider.getFactory("Package");
-        Package sea = aPackage.create("sea");
-        Package air = aPackage.create("air");
-        sea.send();
-        air.send();
-
+        /*Dodajemy nowy rodzaj fabryki, który pozwoli produkować nam paczki (morskie i powietrzne)
+         * */
 
     }
 }

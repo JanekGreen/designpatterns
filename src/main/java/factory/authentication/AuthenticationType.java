@@ -1,4 +1,4 @@
-package factory;
+package factory.authentication;
 
 public enum AuthenticationType {
     SMS, EMAIL
