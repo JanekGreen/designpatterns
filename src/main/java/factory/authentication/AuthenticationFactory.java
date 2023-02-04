@@ -8,6 +8,9 @@ public class AuthenticationFactory {
         if(type == AuthenticationType.EMAIL){
             return new EmailAuthentication();
         }
+        if(type == AuthenticationType.TOKEN){
+            return new TokenAuthentication();
+        }
 
        return null;
     }

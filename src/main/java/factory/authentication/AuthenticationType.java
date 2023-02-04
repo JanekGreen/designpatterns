@@ -1,5 +1,5 @@
 package factory.authentication;
 
 public enum AuthenticationType {
-    SMS, EMAIL
+    SMS, EMAIL,TOKEN
 }
