@@ -9,11 +9,11 @@ public class Person {
         this.surname = surname;
     }
 
-    public static Person personOfName(String name){
+    public static Person OfName(String name){
         return new Person(name, null);
     }
 
-    public static Person personOfSurname(String surname){
+    public static Person OfSurname(String surname){
         return new Person(null, surname);
     }
 
