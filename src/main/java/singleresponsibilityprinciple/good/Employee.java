@@ -8,14 +8,36 @@ public class Employee {
     private String address;
     private Date dateOfJoining;
 
-    public boolean isPromotionDueThisYear() {
-        //promotion logic implementation
-        return true;
+
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public Double calcIncomeTaxForCurrentYear() {
-        //income tax logic
-        return null;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getDateOfJoining() {
+        return dateOfJoining;
+    }
+
+    public void setDateOfJoining(Date dateOfJoining) {
+        this.dateOfJoining = dateOfJoining;
+    }
 }
