@@ -11,7 +11,9 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
-
+        Animal animal = new Bird();
+       Flyable bird = new Bird();
+       bird.fly();
 
     }
 }
