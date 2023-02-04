@@ -15,7 +15,9 @@ public class Dog {
         this.type = dogBuilder.type;
         this.name = dogBuilder.name;
         this.toys = dogBuilder.toys;
-        this.toys = new ArrayList<>(dogBuilder.toys);
+        if(dogBuilder.toys != null) {
+            this.toys = new ArrayList<>(dogBuilder.toys);
+        }
     }
     public static class DogBuilder{
         private String name;

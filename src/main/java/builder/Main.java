@@ -20,7 +20,7 @@ public class Main {
                         .type("aaaa")
                         .build();
 
-        System.out.println(user);
+        System.out.println(dog);
 
     }
 
