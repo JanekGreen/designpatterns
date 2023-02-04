@@ -8,6 +8,7 @@ public class SingletonLazyThreadSafe {
     public synchronized static SingletonLazyThreadSafe getInstance(){
         if(INSTANCE == null){
             INSTANCE = new SingletonLazyThreadSafe();
+
         }
         return INSTANCE;
     }

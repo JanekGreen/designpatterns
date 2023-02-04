@@ -3,18 +3,54 @@ package builder;
 public class User {
 
     //All final attributes
-    private final String firstName; // required
-    private final String lastName; // required
-    private final int age; // optional
-    private final String phone; // optional
-    private final String address; // optional
+    private String firstName; // required
+    private String lastName; // required
+    private int age; // optional
+    private String phone; // optional
+    private  String address; // optional
 
-    private User(UserBuilder builder) {
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.age = builder.age;
-        this.phone = builder.phone;
-        this.address = builder.address;
+    private User(UserBuilder userBuilder){
+        this.phone = userBuilder.phone;
+        this.age = userBuilder.age;
+        this.lastName = userBuilder.lastName;
+        this.firstName = userBuilder.firstName;
+        this.address = userBuilder.address;
+    }
+
+   public static class UserBuilder {
+       private String firstName; // required
+       private String lastName; // required
+       private int age; // optional
+       private String phone; // optional
+       private  String address;
+
+       public UserBuilder(String firstName, String lastName) {
+           this.firstName = firstName;
+           this.lastName = lastName;
+       }
+       public UserBuilder age(int age){
+           this.age = age;
+           return this;
+       }
+       public UserBuilder phone(String phone){
+           this.phone = phone;
+           return this;
+       }
+       public UserBuilder address(String address){
+           this.address = address;
+           return this;
+       }
+       public User build(){
+          return  new User(this);
+       }
+
+   }
+
+/*konwencja nazwaKlasyBuilder*/
+
+    @Override
+    public String toString() {
+        return "User: " + this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.phone + ", " + this.address;
     }
 
     //All getter, and NO setter to provde immutability
@@ -36,54 +72,6 @@ public class User {
 
     public String getAddress() {
         return address;
-    }
-
-/*konwencja nazwaKlasyBuilder*/
-    public static class UserBuilder {
-
-        private final String firstName;
-        private final String lastName;
-        private int age;
-        private String phone;
-        private String address;
-
-        public UserBuilder(String firstName, String lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-
-        public UserBuilder age(int age) {
-            this.age = age;
-            return this;
-        }
-
-        public UserBuilder phone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-
-        public UserBuilder address(String address) {
-            this.address = address;
-            return this;
-        }
-
-        //Return the finally consrcuted User object
-        public User build() {
-            User user = new User(this);
-            validateUserObject(user);
-            return user;
-        }
-
-        private void validateUserObject(User user) {
-           if(user.firstName == null){
-               throw new IllegalStateException();
-           }
-        }
-
-    }
-    @Override
-    public String toString() {
-        return "User: " + this.firstName + ", " + this.lastName + ", " + this.age + ", " + this.phone + ", " + this.address;
     }
 
 }

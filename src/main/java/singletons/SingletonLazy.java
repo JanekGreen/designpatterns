@@ -12,7 +12,8 @@ public class SingletonLazy {
 
     public static SingletonLazy getInstance(){
         /*
-          no thread safety here. can you say why, and how to fix it?
+          W aplikacji wielowątkowej gdy kilka wątków zawoła getInstance w tym samym czasie może zostać stworzonych kilka singletonów
+         Nie uzywamy w aplikacji wielowątkowej
          */
         if(INSTANCE == null){
             INSTANCE = new SingletonLazy();

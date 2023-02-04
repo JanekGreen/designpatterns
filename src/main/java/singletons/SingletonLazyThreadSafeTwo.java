@@ -4,7 +4,7 @@ public class SingletonLazyThreadSafeTwo {
     private volatile static SingletonLazyThreadSafeTwo INSTANCE;
     private SingletonLazyThreadSafeTwo(){}
 
-    /*Thread safe but slow a little bit, every time we enter the method we need to aquire a lock*/
+    /*Można znaleźć rzadkie bugi w internecie, ale ogólnie bezpieczny dla wątków*/
     public static SingletonLazyThreadSafeTwo getInstance(){
         if(INSTANCE == null){
             synchronized (SingletonLazyThreadSafeTwo.class) {

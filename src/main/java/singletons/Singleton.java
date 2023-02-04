@@ -1,7 +1,8 @@
 package singletons;
 
 public class Singleton {
-    /*completely thread safe, guaranteed by Java Language specification*/
+    /*bezpieczny dla wątków, ale musimy się liczyć z tym, że jest tworzony podczas startu aplikacji
+    * Od razu zajmuje pamięć*/
     private static final Singleton INSTANCE = new Singleton();
     private Singleton(){}
 
