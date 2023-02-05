@@ -14,4 +14,7 @@ public class PaymentService {
         return discount.calculateDiscount(price);
     }
 
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
+    }
 }

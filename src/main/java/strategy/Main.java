@@ -1,5 +1,6 @@
 package strategy;
 
+import strategy.discount.BirthdayDiscount;
 import strategy.discount.ChristmasDiscount;
 import strategy.discount.PaymentService;
 import strategy.discount.EasterDiscount;
@@ -18,6 +19,9 @@ public class Main {
         System.out.println(price);
         BigDecimal originalPrice = BigDecimal.valueOf(100d);
         System.out.println(originalPrice);
+        strategy.setDiscount(new BirthdayDiscount());
+        BigDecimal birthdayDiscount = strategy.getPrice(BigDecimal.valueOf(100d));
+        System.out.println("Birthday discount "+birthdayDiscount);
         /*
         Robimy strategię dla Sklepu z podarkami GiftStore przyjmuje w konstruktorze strategię rodzaju płatności
         * */

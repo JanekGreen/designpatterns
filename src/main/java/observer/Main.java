@@ -4,16 +4,13 @@ import observer.irc.ChatObserver;
 import observer.irc.IrcChannel;
 import observer.irc.ObservableChannel;
 import observer.irc.User;
-import observer.news.NewsAgency;
-import observer.news.Observer;
-import observer.news.RadioStationOne;
-import observer.news.TelevisionOne;
+import observer.news.*;
 import observer.news.java.RadioXyz;
 
 public class Main {
 
     public static void main(String[] args) {
-        NewsAgency newsAgency = new NewsAgency(); // agencja prasowa, wszyscy chcą ją obserwować w oczekiwaniu na newsy
+/*        NewsAgency newsAgency = new NewsAgency(); // agencja prasowa, wszyscy chcą ją obserwować w oczekiwaniu na newsy
         Observer televsion = new TelevisionOne();
         newsAgency.register(televsion);
         newsAgency.receiveNews("Unidentified object flying object seen over the white house!!!");
@@ -25,6 +22,16 @@ public class Main {
         Observer radioZyz = new RadioXyz();
         newsAgency.register(radioZyz);
         newsAgency.receiveNews("Pierwszy w polsce polityk powiedział prawde");
+        Observer pizzaNews = new PizzaNews();
+        newsAgency.register(pizzaNews);
+        newsAgency.receiveNews("First personal quantum computer on sale");*/
+
+        IrcChannel observableChannel = new IrcChannel();
+        ChatObserver observerOne = new User("Heniu");
+        observableChannel.register(observerOne);
+        User user = new User("Mitnick");
+        observableChannel.userLogonEvent("Mitnick");
+
 
 
 
