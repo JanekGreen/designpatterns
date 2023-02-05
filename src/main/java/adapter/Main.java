@@ -11,6 +11,8 @@ public class Main {
         //Proszę dodać adapter który pozwoli na obsłużenie DataReceiverNewImpl w DataProcessingService
         //dataProcessingService.processData(...(new DataReceiverNewImpl()));
 
+        dataProcessingService.processData(new IntegerInterfaceAdapter(new IntegerReceiverImpl()));
+
 
 
     }

@@ -1,4 +1,4 @@
-package adapter;
+package adapter.newpackage;
 
 public class DataReceiverNewImpl implements DataReceiverNew {
     @Override

@@ -1,4 +1,4 @@
-package decorator.camera;
+package decorator.coffee;
 
 public class BlackAndWhitePhotoDecorator{
 }
