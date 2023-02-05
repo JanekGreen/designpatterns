@@ -3,6 +3,7 @@ package proxy.senderproxy;
 import proxy.Sender;
 import proxy.SenderImpl;
 
+//Proxy implementuje oryginalny interfejs
 public class SenderProxy implements Sender {
     private final Sender sender;
     public SenderProxy() {
@@ -12,8 +13,8 @@ public class SenderProxy implements Sender {
     @Override
     public String send(String message) {
         System.out.println("Before sending....");
-        /*oryginalny kod*/
-        String send = sender.send(message);
+        StringBuilder sb = new StringBuilder(message).reverse();
+        String send = sender.send(sb.toString());
         System.out.println("after sending");
         return send;
     }

@@ -9,6 +9,7 @@ public class CoffeeMilkDecorator extends CoffeeDecorator{
 
     @Override
     public String make() {
+
         return super.make() + " and some milk";
     }
 }
