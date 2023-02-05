@@ -9,7 +9,7 @@ public class RadioStationOne implements Observer{
 
     @Override
     public void update(String data) {
-        System.out.println("Breaking news on Radio one "+ data);
+        System.out.println("Breaking news on Radio one: "+ data);
     }
 
 }

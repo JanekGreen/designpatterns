@@ -6,10 +6,10 @@ import java.util.List;
 public class NewsAgency implements Observable {
 /*Wszyscy observers są na tej liście*/
     private final List<Observer> observers = new ArrayList<>();
-    private String data;
+    private String latestNews;
 
     public void receiveNews(String news) {
-        this.data = news;
+        this.latestNews = news;
         notifyObservers();
     }
 
@@ -19,7 +19,7 @@ public class NewsAgency implements Observable {
                 .forEach(o -> o.update(data));*/
 
         for (Observer observer : observers){
-            observer.update(this.data);
+            observer.update(this.latestNews);
         }
     }
 

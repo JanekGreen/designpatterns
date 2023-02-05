@@ -17,6 +17,8 @@ public class IntegerArrayIterator implements Iterator<Integer> {
   
   @Override
   public Integer next() {
-    return array[currentIndex++];
+    int element = array[currentIndex];
+    currentIndex++;
+    return element;
   }
 }
