@@ -15,5 +15,8 @@ public class FileSystem {
 	public void closeFile() {
 		System.out.println("Closing file in unix OS");
 	}
+	public void deleteFile(){
+		System.out.println("Deleted!!!");
+	}
 
 }

@@ -21,6 +21,12 @@ public class Main {
         for (Iterator<String> it = people.iterator(); it.hasNext();){
             System.out.println(it.next());
         }
+        int[] numbers = {1, 2, 3, 4, 5};
+        IntegerArrayIterator customIterator = new IntegerArrayIterator(numbers);
+
+        while (customIterator.hasNext()) {
+            System.out.println(customIterator.next());
+        }
 
     }
 }
